@@ -7,14 +7,49 @@
 
 import SwiftUI
 import AVFoundation
+import FirebaseAuth
 
 struct ContentView: View {
     @StateObject private var socketManager = WebSocketManager()
     @State private var inputText: String = ""
     @State private var isTyping = false
+    @EnvironmentObject var authVM: AuthViewModel
+    
     
     var body: some View {
+        Group {
+            if authVM.isAuthenticated {
+                mainChatView
+            } else {
+                AuthView()
+            }
+        }
+    }
+    
+    private var mainChatView: some View {
         VStack {
+            if !authVM.isEmailVerified{
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("📬 Vérifie ton email")
+                            .bold()
+                        Text("Clique pour confirmer ton email afin de sauvegarder ton compte.")
+                            .font(.caption)
+                    }
+                    
+                    Spacer()
+                    
+                    Button("Renvoyer") {
+                        authVM.sendVerificationEmail()
+                    }
+                    .font(.caption)
+                }
+                .padding()
+                .background(Color.yellow.opacity(0.3))
+                .cornerRadius(8)
+                .padding(.horizontal)
+            }
+            
             ScrollViewReader { scrollProxy in
                 ScrollView {
                     VStack {
@@ -73,10 +108,13 @@ struct ContentView: View {
             }
             .padding(.horizontal)
             .padding()
+            
+            Button("Se déconnecter") {
+                authVM.logout()
+            }
+            .foregroundColor(.red)
+            .padding(.top, 10)
         }
     }
-}
-
-#Preview {
-    ContentView()
-}
+    
+    }
