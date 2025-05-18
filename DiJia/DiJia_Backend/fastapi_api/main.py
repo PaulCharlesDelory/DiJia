@@ -1,12 +1,14 @@
 from fastapi import FastAPI, Request
-from pydantic import BaseModel
 from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 from openai import OpenAI
+from dotenv import load_dotenv
 import os
 
 
+load_dotenv()
 
-client = OpenAI(api_key=os.getenv("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"))  
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))  
 
 app = FastAPI()
 
@@ -36,9 +38,10 @@ async def message_handler(msg: Message):
         return {"response": reply}
 
     except Exception as e:
-        print(f"Erreur rencontrée : {e}")
+        print(f"❌ Erreur rencontrée : {e}")
         return {"response": "Erreur dans le traitement GPT-4.", "error": str(e)}
 
+# 🔁 Endpoint de test
 @app.get("/api/ping")
 def ping():
     return {"ping": "pong"}

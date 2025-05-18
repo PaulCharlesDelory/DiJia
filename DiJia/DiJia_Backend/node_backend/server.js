@@ -1,13 +1,17 @@
-const express = require('express');
-const http = require('http');
-const axios = require('axios');
-const { Server } = require('socket.io');
+import express from 'express';
+import http from 'http';
+import axios from 'axios';
+import { Server } from 'socket.io';
 
 const app = express();
 const port = process.env.PORT || 8088;
 const server = http.createServer(app);
+
+
 const io = new Server(server, {
-  cors: { origin: '*' }
+  cors: { 
+    origin: '*',
+  },
 });
 
 
