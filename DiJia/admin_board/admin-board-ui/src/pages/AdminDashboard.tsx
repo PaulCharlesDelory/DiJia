@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import AddAIForm from "@/components/AddAIForm";
-import AIList from "@/components/AIList";
-import EditAIModal from "@/components/EditAIModal";
+import AddAIForm from "../components/AddAIForm";
+import AIList from "../components/AIList";
+import EditAIModal from "../components/EditAIModal";
 import type { AI } from "@/types";
 
 export default function AdminDashboard() {
