@@ -3,11 +3,20 @@ import AddAIForm from "../components/AddAIForm";
 import AIList from "../components/AIList";
 import EditAIModal from "../components/EditAIModal";
 import type { AI } from "@/types";
+import { useNavigate } from "react-router-dom";
+
 
 export default function AdminDashboard() {
   const [selectedAI, setSelectedAI] = useState<AI | null>(null);
   const [openModal, setOpenModal] = useState(false);
   const [refresh, setRefresh] = useState(false); // pour forcer le rechargement
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("authenticated");
+    navigate("/login");
+  };
+
 
   const handleEdit = (ai: AI) => {
     setSelectedAI(ai);
@@ -21,7 +30,16 @@ export default function AdminDashboard() {
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Ajouter une IA</h1>
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-2xl font-bold">Ajouter une IA</h1>
+        <button
+          onClick={handleLogout}
+          className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+        >
+          Déconnexion
+        </button>
+      </div>
+
       <AddAIForm />
 
       <h2 className="text-xl font-bold mt-10 mb-2">Liste des IA</h2>
@@ -38,5 +56,6 @@ export default function AdminDashboard() {
     </div>
   );
 }
+
 
 
