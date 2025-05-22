@@ -1,9 +1,11 @@
 import SwiftUI
 
 struct HomeView: View {
+    var ia: IA
     @EnvironmentObject var authVM: AuthViewModel
 
     var body: some View {
+        
         VStack(spacing: 20) {
             if !authVM.isEmailVerified {
                 HStack {
@@ -27,7 +29,7 @@ struct HomeView: View {
                 .padding(.horizontal)
             }
 
-            Text("Bienvenue dans DiJia ✨")
+            Text("Bienvenue dans DiJia avec \(ia.name) 🧠")
                 .font(.title)
 
             Button("Se déconnecter") {

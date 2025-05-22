@@ -2,17 +2,37 @@ import SwiftUI
 import AVFoundation
 import FirebaseAuth
 
+
+let testIAListe: [IA] = [
+    IA(id: 1, name: "Gollum", description: "Un être malicieux", avatar_url: "http://static.wikia.nocookie.net/seigneur-des-anneaux/images/4/41/Gollum_hobbit.jpg/revision/latest?cb=20140824092651&path-prefix=fr"),
+    IA(id: 2, name: "Jarvis", description: "Assistant intelligent", avatar_url: "https://www.marvel-cineverse.fr/pages/mcu/encyclopedie/objets/jarvis.html"),
+    IA(id: 3, name: "Athena", description: "Déesse des IA", avatar_url: "https://static.wikia.nocookie.net/percy-jackson/images/f/ff/RR_Viria_-_Ath%C3%A9na.jpg/revision/latest?cb=20231005185220&path-prefix=fr"),
+    IA(id: 4, name: "Neo", description: "Le choix de la Matrice", avatar_url: "https://www.premiere.fr/Cinema/News-Cinema/La-theorie-qui-tue-Neo-na-jamais-ete-lelu-dans-Matrix")
+]
+
+
 struct ContentView: View {
     @StateObject private var socketManager = WebSocketManager()
     @State private var inputText: String = ""
     @State private var isTyping = false
     @State private var showMessages = true
+    @State private var selectedIA: IA? = nil
+    @State private var isIASelected = false
     @EnvironmentObject var authVM: AuthViewModel
     
     var body: some View {
+        SplashView()
         Group {
             if authVM.isAuthenticated {
-                mainChatView
+                if isIASelected {
+                    if let selectedIA = selectedIA {
+                        HomeView(ia: selectedIA)
+                    } else {
+                        Text("Erreur : aucune IA sélectionnée")
+                    }// Tu passes l’IA sélectionnée ici
+                } else {
+                    IASelectionView(selectedIA: $selectedIA, isIASelected: $isIASelected, iaList: testIAListe)
+                }
             } else {
                 AuthView()
             }
