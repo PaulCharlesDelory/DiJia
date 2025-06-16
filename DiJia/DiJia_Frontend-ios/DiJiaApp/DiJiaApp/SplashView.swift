@@ -5,29 +5,36 @@ struct SplashView: View {
 
     var body: some View {
         if isActive {
-            AuthView() // 👉 Change ici si tu veux une autre vue après
+            AuthView()
         } else {
-            VStack {
-                Spacer()
-                Image("Splashscreen")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 200, height: 200)
-                Spacer()
+            ZStack {
+                Color.white
+                    .ignoresSafeArea()
+
+                VStack(spacing: 16) {
+                    Image("Splashscreen")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 200, height: 200)
+
+                    Text("DiJia")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color.blue)
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color.white)
             .onAppear {
-                // ⏱️ Délai avant de naviguer vers AuthView
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
                     withAnimation {
-                        isActive = true
+                        self.isActive = true
                     }
                 }
             }
         }
     }
 }
+
 //
 //  SplashView.swift
 //  DiJiaApp
