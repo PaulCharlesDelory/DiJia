@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB2503DF2DA5108C009D04DC /* SocketIO in Frameworks */ = {isa = PBXBuildFile; productRef = EB2503DE2DA5108C009D04DC /* SocketIO */; };
+		EB25046B2DAD310F009D04DC /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = EB25046A2DAD310F009D04DC /* FirebaseAuth */; };
+		EB25046D2DAD310F009D04DC /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = EB25046C2DAD310F009D04DC /* FirebaseCore */; };
+		EB25046F2DAD310F009D04DC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = EB25046E2DAD310F009D04DC /* FirebaseFirestore */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EB25037A2DA4C4E2009D04DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB2503642DA4C4E0009D04DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB25036B2DA4C4E0009D04DC;
+			remoteInfo = DiJiaApp;
+		};
+		EB2503842DA4C4E2009D04DC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB2503642DA4C4E0009D04DC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB25036B2DA4C4E0009D04DC;
+			remoteInfo = DiJiaApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EB25036C2DA4C4E0009D04DC /* DiJiaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiJiaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB2503792DA4C4E2009D04DC /* DiJiaAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiJiaAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB2503832DA4C4E2009D04DC /* DiJiaAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DiJiaAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EB25036E2DA4C4E0009D04DC /* DiJiaApp */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DiJiaApp;
+			sourceTree = "<group>";
+		};
+		EB25037C2DA4C4E2009D04DC /* DiJiaAppTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DiJiaAppTests;
+			sourceTree = "<group>";
+		};
+		EB2503862DA4C4E2009D04DC /* DiJiaAppUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = DiJiaAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB2503692DA4C4E0009D04DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB2503DF2DA5108C009D04DC /* SocketIO in Frameworks */,
+				EB25046F2DAD310F009D04DC /* FirebaseFirestore in Frameworks */,
+				EB25046D2DAD310F009D04DC /* FirebaseCore in Frameworks */,
+				EB25046B2DAD310F009D04DC /* FirebaseAuth in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB2503762DA4C4E2009D04DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB2503802DA4C4E2009D04DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB2503632DA4C4E0009D04DC = {
+			isa = PBXGroup;
+			children = (
+				EB25036E2DA4C4E0009D04DC /* DiJiaApp */,
+				EB25037C2DA4C4E2009D04DC /* DiJiaAppTests */,
+				EB2503862DA4C4E2009D04DC /* DiJiaAppUITests */,
+				EB2503DD2DA51069009D04DC /* Frameworks */,
+				EB25036D2DA4C4E0009D04DC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB25036D2DA4C4E0009D04DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB25036C2DA4C4E0009D04DC /* DiJiaApp.app */,
+				EB2503792DA4C4E2009D04DC /* DiJiaAppTests.xctest */,
+				EB2503832DA4C4E2009D04DC /* DiJiaAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB2503DD2DA51069009D04DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB25036B2DA4C4E0009D04DC /* DiJiaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB25038D2DA4C4E2009D04DC /* Build configuration list for PBXNativeTarget "DiJiaApp" */;
+			buildPhases = (
+				EB2503682DA4C4E0009D04DC /* Sources */,
+				EB2503692DA4C4E0009D04DC /* Frameworks */,
+				EB25036A2DA4C4E0009D04DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EB25036E2DA4C4E0009D04DC /* DiJiaApp */,
+			);
+			name = DiJiaApp;
+			packageProductDependencies = (
+				EB2503DE2DA5108C009D04DC /* SocketIO */,
+				EB25046A2DAD310F009D04DC /* FirebaseAuth */,
+				EB25046C2DAD310F009D04DC /* FirebaseCore */,
+				EB25046E2DAD310F009D04DC /* FirebaseFirestore */,
+			);
+			productName = DiJiaApp;
+			productReference = EB25036C2DA4C4E0009D04DC /* DiJiaApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EB2503782DA4C4E2009D04DC /* DiJiaAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB2503902DA4C4E2009D04DC /* Build configuration list for PBXNativeTarget "DiJiaAppTests" */;
+			buildPhases = (
+				EB2503752DA4C4E2009D04DC /* Sources */,
+				EB2503762DA4C4E2009D04DC /* Frameworks */,
+				EB2503772DA4C4E2009D04DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB25037B2DA4C4E2009D04DC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EB25037C2DA4C4E2009D04DC /* DiJiaAppTests */,
+			);
+			name = DiJiaAppTests;
+			packageProductDependencies = (
+			);
+			productName = DiJiaAppTests;
+			productReference = EB2503792DA4C4E2009D04DC /* DiJiaAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EB2503822DA4C4E2009D04DC /* DiJiaAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB2503932DA4C4E2009D04DC /* Build configuration list for PBXNativeTarget "DiJiaAppUITests" */;
+			buildPhases = (
+				EB25037F2DA4C4E2009D04DC /* Sources */,
+				EB2503802DA4C4E2009D04DC /* Frameworks */,
+				EB2503812DA4C4E2009D04DC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB2503852DA4C4E2009D04DC /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EB2503862DA4C4E2009D04DC /* DiJiaAppUITests */,
+			);
+			name = DiJiaAppUITests;
+			packageProductDependencies = (
+			);
+			productName = DiJiaAppUITests;
+			productReference = EB2503832DA4C4E2009D04DC /* DiJiaAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB2503642DA4C4E0009D04DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1630;
+				LastUpgradeCheck = 1630;
+				TargetAttributes = {
+					EB25036B2DA4C4E0009D04DC = {
+						CreatedOnToolsVersion = 16.3;
+					};
+					EB2503782DA4C4E2009D04DC = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = EB25036B2DA4C4E0009D04DC;
+					};
+					EB2503822DA4C4E2009D04DC = {
+						CreatedOnToolsVersion = 16.3;
+						TestTargetID = EB25036B2DA4C4E0009D04DC;
+					};
+				};
+			};
+			buildConfigurationList = EB2503672DA4C4E0009D04DC /* Build configuration list for PBXProject "DiJiaApp" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB2503632DA4C4E0009D04DC;
+			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				EB2503C02DA4D7FB009D04DC /* XCRemoteSwiftPackageReference "socket" */,
+				EB2504692DAD310F009D04DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EB25036D2DA4C4E0009D04DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB25036B2DA4C4E0009D04DC /* DiJiaApp */,
+				EB2503782DA4C4E2009D04DC /* DiJiaAppTests */,
+				EB2503822DA4C4E2009D04DC /* DiJiaAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB25036A2DA4C4E0009D04DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB2503772DA4C4E2009D04DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB2503812DA4C4E2009D04DC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB2503682DA4C4E0009D04DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB2503752DA4C4E2009D04DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB25037F2DA4C4E2009D04DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB25037B2DA4C4E2009D04DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB25036B2DA4C4E0009D04DC /* DiJiaApp */;
+			targetProxy = EB25037A2DA4C4E2009D04DC /* PBXContainerItemProxy */;
+		};
+		EB2503852DA4C4E2009D04DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB25036B2DA4C4E0009D04DC /* DiJiaApp */;
+			targetProxy = EB2503842DA4C4E2009D04DC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EB25038B2DA4C4E2009D04DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EB25038C2DA4C4E2009D04DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB25038E2DA4C4E2009D04DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A4S356B4M7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cassiope.DiJiaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB25038F2DA4C4E2009D04DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = A4S356B4M7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cassiope.DiJiaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EB2503912DA4C4E2009D04DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cassiope.DiJiaAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiJiaApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DiJiaApp";
+			};
+			name = Debug;
+		};
+		EB2503922DA4C4E2009D04DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cassiope.DiJiaAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DiJiaApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/DiJiaApp";
+			};
+			name = Release;
+		};
+		EB2503942DA4C4E2009D04DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cassiope.DiJiaAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DiJiaApp;
+			};
+			name = Debug;
+		};
+		EB2503952DA4C4E2009D04DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cassiope.DiJiaAppUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = DiJiaApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB2503672DA4C4E0009D04DC /* Build configuration list for PBXProject "DiJiaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB25038B2DA4C4E2009D04DC /* Debug */,
+				EB25038C2DA4C4E2009D04DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB25038D2DA4C4E2009D04DC /* Build configuration list for PBXNativeTarget "DiJiaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB25038E2DA4C4E2009D04DC /* Debug */,
+				EB25038F2DA4C4E2009D04DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB2503902DA4C4E2009D04DC /* Build configuration list for PBXNativeTarget "DiJiaAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB2503912DA4C4E2009D04DC /* Debug */,
+				EB2503922DA4C4E2009D04DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB2503932DA4C4E2009D04DC /* Build configuration list for PBXNativeTarget "DiJiaAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB2503942DA4C4E2009D04DC /* Debug */,
+				EB2503952DA4C4E2009D04DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EB2503C02DA4D7FB009D04DC /* XCRemoteSwiftPackageReference "socket" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/socketio/socket.io-client-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		EB2504692DAD310F009D04DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 11.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EB2503DE2DA5108C009D04DC /* SocketIO */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB2503C02DA4D7FB009D04DC /* XCRemoteSwiftPackageReference "socket" */;
+			productName = SocketIO;
+		};
+		EB25046A2DAD310F009D04DC /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB2504692DAD310F009D04DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		EB25046C2DAD310F009D04DC /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB2504692DAD310F009D04DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		EB25046E2DAD310F009D04DC /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EB2504692DAD310F009D04DC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = EB2503642DA4C4E0009D04DC /* Project object */;
+}
