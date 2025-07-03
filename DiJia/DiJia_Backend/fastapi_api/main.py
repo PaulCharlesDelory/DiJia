@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from openai import OpenAI
+import openai
 from dotenv import load_dotenv
 from routes import admin
 import os
@@ -10,7 +10,7 @@ import os
 load_dotenv()
 
 # ✅ Instancier le client sans arguments (il lira OPENAI_API_KEY automatiquement)
-client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
+openai.api_key = os.environ["OPENAI_API_KEY"]
 
 # ✅ Définir l’app FastAPI
 app = FastAPI()
@@ -34,14 +34,14 @@ class Message(BaseModel):
 @app.post("/api/message")
 async def message_handler(msg: Message):
     try:
-        response = client.chat.completions.create(
+        response = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[
                 {"role": "system", "content": "Tu es une IA amicale appelée DiJia."},
                 {"role": "user", "content": msg.content}
             ]
         )
-        reply = response.choices[0].message.content
+        reply = response.choices[0].message["content"]
         return {"response": reply}
 
     except Exception as e:
